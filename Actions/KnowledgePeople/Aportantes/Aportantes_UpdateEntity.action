@@ -1,0 +1,22 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Aportantes",
+        "Service": "/DreamsBank/Services/dreamsbankkk.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "cedula": "#Control:cedula/#Value",
+        "nombre": "#Control:nombre/#Value",
+        "edad": "#Control:edad/#Value",
+        "empresa": "#Control:empresa/#Value",
+        "telefono": "#Control:telefono/#Value",
+        "correo": "#Control:correo/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/DreamsBank/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/DreamsBank/Actions/UpdateEntityFailureMessage.action"
+}

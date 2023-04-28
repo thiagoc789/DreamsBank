@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="MyService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Beneficiarios" EntityType="MyService.Beneficiarios"/>
+                <EntitySet Name="Aportantes" EntityType="MyService.Aportantes"/>
+                <EntitySet Name="Productos" EntityType="MyService.Productos"/>
+                <EntitySet Name="Transacciones" EntityType="MyService.Transacciones"/>
+            </EntityContainer>
+            <EntityType Name="Beneficiarios">
+                <Key>
+                    <PropertyRef Name="cedula"/>
+                </Key>
+                <Property Name="cedula" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="nombre" Type="Edm.String" MaxLength="100"/>
+                <Property Name="edad" Type="Edm.String" MaxLength="10"/>
+                <Property Name="carrera" Type="Edm.String" MaxLength="100"/>
+                <Property Name="semestre" Type="Edm.String" MaxLength="10"/>
+                <Property Name="universidad" Type="Edm.String" MaxLength="100"/>
+                <Property Name="telefono" Type="Edm.String" MaxLength="20"/>
+                <Property Name="correo" Type="Edm.String" MaxLength="100"/>
+                <Property Name="id_aporte" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="Aportantes">
+                <Key>
+                    <PropertyRef Name="cedula"/>
+                </Key>
+                <Property Name="cedula" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="nombre" Type="Edm.String" MaxLength="100"/>
+                <Property Name="edad" Type="Edm.String" MaxLength="10"/>
+                <Property Name="empresa" Type="Edm.String" MaxLength="100"/>
+                <Property Name="telefono" Type="Edm.String" MaxLength="20"/>
+                <Property Name="correo" Type="Edm.String" MaxLength="100"/>
+            </EntityType>
+            <EntityType Name="Productos">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="nombre" Type="Edm.String" MaxLength="100"/>
+                <Property Name="descripcion" Type="Edm.String" MaxLength="500"/>
+                <Property Name="valor" Type="Edm.String" MaxLength="100"/>
+            </EntityType>
+            <EntityType Name="Transacciones">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="beneficiario" Type="Edm.String" MaxLength="10"/>
+                <Property Name="aportante" Type="Edm.String" MaxLength="10"/>
+                <Property Name="producto" Type="Edm.String" MaxLength="10"/>
+                <Property Name="estado" Type="Edm.String" MaxLength="20"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,115 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "Banco de becas",
+						"Footnote": "0.0.1",
+						"DetailImage": "/DreamsBank/Images/dreamsbank.jpg",
+						"DetailImageIsCircular": true,
+						"BodyText": "User...",
+						"HeadlineText": "DreamsBank",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					},
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Buttons": [
+						{
+							"_Name": "SectionButton0",
+							"Title": "Knowledge People",
+							"TextAlignment": "Center",
+							"Visible": true,
+							"OnPress": {
+								"Handler": "/DreamsBank/Actions/KnowledgePeople/NavToKP.action",
+								"UserInteraction": {
+									"Enabled": true,
+									"Title": "Button"
+								}
+							}
+						},
+						{
+							"_Name": "SectionButton1",
+							"Title": "Knowledge Run",
+							"TextAlignment": "Center",
+							"Visible": true
+						},
+						{
+							"_Name": "SectionButton2",
+							"Title": "Knowledge Project",
+							"TextAlignment": "Center",
+							"Visible": true
+						},
+						{
+							"_Name": "SectionButton3",
+							"Title": "Knowledge Factory",
+							"TextAlignment": "Center",
+							"Visible": true
+						}
+					]
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Inicio",
+	"Caption": "Inicio",
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "ToolbarItem0",
+				"Caption": "Cerrar Sesion",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"Style": "",
+				"OnPress": "/DreamsBank/Actions/LogoutMessage.action"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "ToolbarItem1",
+				"Caption": "Actualizar",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"Style": "",
+				"OnPress": "/DreamsBank/Actions/AppUpdateProgressBanner.action"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "ToolbarItem2",
+				"Caption": "Sincronizar",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"Style": "",
+				"OnPress": "/DreamsBank/Actions/Service/UploadOff.action"
+			}
+		]
+	}
+}

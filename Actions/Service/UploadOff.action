@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.OfflineOData.Upload",
+	"ActionResult": {
+		"_Name": "UploadOff"
+	},
+	"Service": "/DreamsBank/Services/dreamsbankkk.service",
+	"UploadCategories": [
+		"Transacciones"
+	]
+}

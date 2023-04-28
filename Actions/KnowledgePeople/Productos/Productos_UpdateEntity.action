@@ -1,0 +1,20 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Productos",
+        "Service": "/DreamsBank/Services/dreamsbankkk.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "id": "#Control:id/#Value",
+        "nombre": "#Control:nombre/#Value",
+        "descripcion": "#Control:descripcion/#Value",
+        "valor": "#Control:valor/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/DreamsBank/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/DreamsBank/Actions/UpdateEntityFailureMessage.action"
+}

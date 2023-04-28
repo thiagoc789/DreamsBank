@@ -1,0 +1,73 @@
+{
+	"Caption": "Productos",
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Productos/NavToProductos_Create.action",
+				"Position": "Right",
+				"SystemItem": "Add"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{descripcion}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Productos/NavToProductos_Detail.action",
+						"StatusImage": "",
+						"Title": "{id}",
+						"Footnote": "{valor}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "",
+						"Subhead": "{nombre}",
+						"SubstatusText": ""
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"Target": {
+						"EntitySet": "Productos",
+						"Service": "/DreamsBank/Services/dreamsbankkk.service",
+						"QueryOptions": ""
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Productos_List",
+	"PrefersLargeCaption": true
+}

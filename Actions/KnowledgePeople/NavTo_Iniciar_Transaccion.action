@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavTo_Iniciar_Transaccion"
+	},
+	"PageToOpen": "/DreamsBank/Pages/KnowledgePeople/Iniciar_Transaccion.page"
+}

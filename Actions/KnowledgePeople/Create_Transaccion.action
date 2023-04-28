@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Create_Transaccion"
+	},
+	"OnFailure": "/DreamsBank/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/DreamsBank/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"Service": "/DreamsBank/Services/dreamsbankkk.service",
+		"EntitySet": "Transacciones"
+	},
+	"Properties": {
+		"id": "/DreamsBank/Rules/generar_aleatorio.js",
+		"beneficiario": "#Control:Fc_listpicker_beneficiario_KP/#SelectedValue",
+		"aportante": "#Control:Fc_listpicker_aportante_KP/#SelectedValue",
+		"producto": "#Control:Fc_listpicker_producto_KP/#SelectedValue",
+		"estado": "Enviado"
+	}
+}

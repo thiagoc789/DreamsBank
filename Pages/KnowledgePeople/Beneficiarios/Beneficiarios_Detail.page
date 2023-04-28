@@ -1,0 +1,96 @@
+{
+	"Caption": "Beneficiarios Detail",
+	"DesignTimeTarget": {
+		"Service": "/DreamsBank/Services/dreamsbankkk.service",
+		"EntitySet": "Beneficiarios",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/DreamsBank/Rules/Beneficiarios/Beneficiarios_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{cedula}",
+						"Subhead": "{nombre}",
+						"BodyText": "",
+						"Footnote": "{carrera}",
+						"Description": "{edad}",
+						"StatusText": "{semestre}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{universidad}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "cedula",
+							"Value": "{cedula}"
+						},
+						{
+							"KeyName": "nombre",
+							"Value": "{nombre}"
+						},
+						{
+							"KeyName": "edad",
+							"Value": "{edad}"
+						},
+						{
+							"KeyName": "carrera",
+							"Value": "{carrera}"
+						},
+						{
+							"KeyName": "semestre",
+							"Value": "{semestre}"
+						},
+						{
+							"KeyName": "universidad",
+							"Value": "{universidad}"
+						},
+						{
+							"KeyName": "telefono",
+							"Value": "{telefono}"
+						},
+						{
+							"KeyName": "correo",
+							"Value": "{correo}"
+						},
+						{
+							"KeyName": "id_aporte",
+							"Value": "{id_aporte}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Beneficiarios_Detail",
+	"PrefersLargeCaption": true
+}

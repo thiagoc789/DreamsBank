@@ -1,0 +1,76 @@
+{
+	"Caption": "Productos Detail",
+	"DesignTimeTarget": {
+		"Service": "/DreamsBank/Services/dreamsbankkk.service",
+		"EntitySet": "Productos",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Productos/NavToProductos_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/DreamsBank/Rules/Productos/Productos_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{id}",
+						"Subhead": "{nombre}",
+						"BodyText": "",
+						"Footnote": "{valor}",
+						"Description": "{descripcion}",
+						"StatusText": "",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "id",
+							"Value": "{id}"
+						},
+						{
+							"KeyName": "nombre",
+							"Value": "{nombre}"
+						},
+						{
+							"KeyName": "descripcion",
+							"Value": "{descripcion}"
+						},
+						{
+							"KeyName": "valor",
+							"Value": "{valor}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Productos_Detail",
+	"PrefersLargeCaption": true
+}

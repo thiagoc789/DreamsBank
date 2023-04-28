@@ -1,0 +1,13 @@
+{
+    "Target": {
+        "EntitySet": "Aportantes",
+        "Service": "/DreamsBank/Services/dreamsbankkk.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "OnSuccess": "/DreamsBank/Actions/DeleteEntitySuccessMessage.action",
+    "OnFailure": "/DreamsBank/Actions/DeleteEntityFailureMessage.action",
+    "ActionResult": {
+        "_Name": "delete"
+    },
+    "_Type": "Action.Type.ODataService.DeleteEntity"
+}

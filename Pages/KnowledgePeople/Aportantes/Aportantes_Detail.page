@@ -1,0 +1,84 @@
+{
+	"Caption": "Aportantes Detail",
+	"DesignTimeTarget": {
+		"Service": "/DreamsBank/Services/dreamsbankkk.service",
+		"EntitySet": "Aportantes",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aportantes/NavToAportantes_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/DreamsBank/Rules/Aportantes/Aportantes_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{cedula}",
+						"Subhead": "{nombre}",
+						"BodyText": "",
+						"Footnote": "{empresa}",
+						"Description": "{edad}",
+						"StatusText": "{telefono}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{correo}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "cedula",
+							"Value": "{cedula}"
+						},
+						{
+							"KeyName": "nombre",
+							"Value": "{nombre}"
+						},
+						{
+							"KeyName": "edad",
+							"Value": "{edad}"
+						},
+						{
+							"KeyName": "empresa",
+							"Value": "{empresa}"
+						},
+						{
+							"KeyName": "telefono",
+							"Value": "{telefono}"
+						},
+						{
+							"KeyName": "correo",
+							"Value": "{correo}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Aportantes_Detail",
+	"PrefersLargeCaption": true
+}

@@ -1,0 +1,68 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"ObjectHeader": {
+						"DetailImage": "/DreamsBank/Images/KP.png",
+						"DetailImageIsCircular": false,
+						"HeadlineText": "Aportes economicos o de conocimiento a estudiantes",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading",
+						"Styles": {
+							"HeadlineText": "HeadlineText"
+						}
+					},
+					"Visible": true
+				},
+				{
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Buttons": [
+						{
+							"_Name": "SectionButton0",
+							"Title": "Aportantes",
+							"TextAlignment": "Center",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aportantes/NavToAportantes_List.action"
+						},
+						{
+							"_Name": "SectionButton1",
+							"Title": "Beneficiarios",
+							"TextAlignment": "Center",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_List.action"
+						},
+						{
+							"_Name": "SectionButton2",
+							"Title": "Productos",
+							"TextAlignment": "Center",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Productos/NavToProductos_List.action"
+						},
+						{
+							"_Name": "SectionButton3",
+							"Title": "Iniciar transacción",
+							"TextAlignment": "Center",
+							"OnPress": {
+								"Handler": "/DreamsBank/Actions/KnowledgePeople/NavTo_Iniciar_Transaccion.action",
+								"UserInteraction": {
+									"Enabled": true,
+									"Title": "Iniciar transacción"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Main",
+	"Caption": "Knowledge People"
+}

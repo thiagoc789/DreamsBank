@@ -1,0 +1,130 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": [
+								"{cedula}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Fc_listpicker_aportante_KP",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Aportante:",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Seleccione un aportante",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": {
+								"Target": {
+									"Service": "/DreamsBank/Services/dreamsbankkk.service",
+									"EntitySet": "Aportantes",
+									"ServerSidePaging": true
+								},
+								"ObjectCell": {
+									"Description": "{correo}",
+									"DetailImageIsCircular": false,
+									"Footnote": "{edad}",
+									"Icons": [],
+									"PreserveIconStackSpacing": true,
+									"StatusText": "{cedula}",
+									"Styles": {},
+									"Subhead": "{empresa}",
+									"SubstatusText": "{telefono}",
+									"Title": "{nombre}"
+								},
+								"ReturnValue": "{cedula}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Fc_listpicker_beneficiario_KP",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Beneficiario:",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": {
+								"Target": {
+									"Service": "/DreamsBank/Services/dreamsbankkk.service",
+									"EntitySet": "Beneficiarios",
+									"ServerSidePaging": true
+								},
+								"ObjectCell": {
+									"Description": "{cedula}",
+									"DetailImageIsCircular": false,
+									"Icons": [],
+									"PreserveIconStackSpacing": true,
+									"Styles": {},
+									"Title": "{nombre}"
+								},
+								"ReturnValue": "{cedula}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Fc_listpicker_producto_KP",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Producto:",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": {
+								"Target": {
+									"Service": "/DreamsBank/Services/dreamsbankkk.service",
+									"EntitySet": "Productos"
+								},
+								"DisplayValue": "{nombre}",
+								"ReturnValue": "{id}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton0",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Crear Transacción",
+							"TextAlignment": "Center",
+							"ButtonType": "Text",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Create_Transaccion.action"
+						}
+					],
+					"Visible": true
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Iniciar_Transaccion",
+	"Caption": "Iniciar_Transaccion"
+}

@@ -1,0 +1,24 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/DreamsBank/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/DreamsBank/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "cedula": "#Control:cedula/#Value",
+        "nombre": "#Control:nombre/#Value",
+        "edad": "#Control:edad/#Value",
+        "carrera": "#Control:carrera/#Value",
+        "semestre": "#Control:semestre/#Value",
+        "universidad": "#Control:universidad/#Value",
+        "telefono": "#Control:telefono/#Value",
+        "correo": "#Control:correo/#Value",
+        "id_aporte": "#Control:id_aporte/#Value"
+    },
+    "Target": {
+        "EntitySet": "Beneficiarios",
+        "Service": "/DreamsBank/Services/dreamsbankkk.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}
