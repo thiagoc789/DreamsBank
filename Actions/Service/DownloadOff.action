@@ -1,0 +1,26 @@
+{
+	"_Type": "Action.Type.OfflineOData.Download",
+	"ActionResult": {
+		"_Name": "DownloadOff"
+	},
+	"OnFailure": "/DreamsBank/Actions/AppUpdateFailureMessage.action",
+	"OnSuccess": "/DreamsBank/Actions/AppUpdateSuccessMessage.action",
+	"Service": "/DreamsBank/Services/dreamsbankkk.service",
+	"DefiningRequests": [
+		{
+			"Name": "Transacciones",
+			"Query": "Transacciones",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "Aportantes",
+			"Query": "Aportantes",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "Productos",
+			"Query": "Productos",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
+}

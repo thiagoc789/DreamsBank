@@ -3,6 +3,7 @@
 	"ActionResult": {
 		"_Name": "UploadOff"
 	},
+	"OnSuccess": "/DreamsBank/Actions/Service/DownloadOff.action",
 	"Service": "/DreamsBank/Services/dreamsbankkk.service",
 	"UploadCategories": [
 		"Transacciones"

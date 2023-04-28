@@ -1,44 +1,40 @@
 {
-	"Caption": "Beneficiarios",
-	"ActionBar": {
-		"Items": [
-			{
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_Create.action",
-				"Position": "Right",
-				"SystemItem": "Add"
-			}
-		]
-	},
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
 			"Sections": [
 				{
 					"Header": {
+						"_Name": "SectionHeader0",
 						"UseTopPadding": false
 					},
-					"ObjectCell": {
-						"AccessoryType": "disclosureIndicator",
-						"Description": "{edad}",
-						"AvatarStack": {
-							"Avatars": [
-								{
-									"Image": ""
-								}
-							],
-							"ImageIsCircular": false
-						},
-						"Icons": [],
-						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_Detail.action",
-						"StatusImage": "",
-						"Title": "{cedula}",
-						"Footnote": "{carrera}",
-						"PreserveIconStackSpacing": false,
-						"StatusText": "{semestre}",
-						"Subhead": "{nombre}",
-						"SubstatusText": "{universidad}"
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"EntitySet": "Beneficiarios",
+						"Service": "/DreamsBank/Services/dreamsbankkk.service",
+						"QueryOptions": ""
 					},
+					"_Name": "SectionObjectTable0",
 					"EmptySection": {
-						"Caption": "No record found!"
+						"Caption": "No record found!",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"Title": "{cedula}",
+						"Subhead": "{nombre}",
+						"Footnote": "{carrera}",
+						"Description": "{edad}",
+						"StatusText": "{semestre}",
+						"SubstatusText": "{universidad}",
+						"DetailImage": "https://cdn-icons-png.flaticon.com/512/5850/5850276.png",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_Detail.action",
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true
+						}
 					},
 					"Search": {
 						"Enabled": true,
@@ -50,24 +46,29 @@
 					"DataPaging": {
 						"ShowLoadingIndicator": true,
 						"LoadingIndicatorText": "Loading more items, please wait..."
-					},
-					"Target": {
-						"EntitySet": "Beneficiarios",
-						"Service": "/DreamsBank/Services/dreamsbankkk.service",
-						"QueryOptions": ""
-					},
-					"_Type": "Section.Type.ObjectTable"
+					}
 				}
 			],
 			"LoadingIndicator": {
 				"Enabled": true,
 				"Text": "Loading, please wait..."
-			},
-			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable"
+			}
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Beneficiarios_List",
-	"PrefersLargeCaption": true
+	"Caption": "Beneficiarios",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Add",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_Create.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }

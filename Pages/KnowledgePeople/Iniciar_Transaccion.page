@@ -7,9 +7,6 @@
 				{
 					"Controls": [
 						{
-							"Value": [
-								"{cedula}"
-							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "Fc_listpicker_aportante_KP",
 							"IsEditable": true,
@@ -35,6 +32,7 @@
 								},
 								"ObjectCell": {
 									"Description": "{correo}",
+									"DetailImage": "/DreamsBank/Images/profile.png",
 									"DetailImageIsCircular": false,
 									"Footnote": "{edad}",
 									"Icons": [],
@@ -73,6 +71,7 @@
 								},
 								"ObjectCell": {
 									"Description": "{cedula}",
+									"DetailImage": "https://cdn-icons-png.flaticon.com/512/5850/5850276.png",
 									"DetailImageIsCircular": false,
 									"Icons": [],
 									"PreserveIconStackSpacing": true,
@@ -115,7 +114,7 @@
 							"Separator": true,
 							"Title": "Crear Transacción",
 							"TextAlignment": "Center",
-							"ButtonType": "Text",
+							"ButtonType": "Primary",
 							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Create_Transaccion.action"
 						}
 					],
