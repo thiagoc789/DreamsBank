@@ -21,18 +21,16 @@
 						"FooterVisible": false
 					},
 					"ObjectCell": {
-						"Title": "{id}",
-						"Subhead": "{nombre}",
-						"Footnote": "{valor}",
-						"Description": "{descripcion}",
-						"DetailImage": "/DreamsBank/Images/lh.jpg",
-						"PreserveIconStackSpacing": false,
-						"AccessoryType": "disclosureIndicator",
-						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Productos/NavToProductos_Detail.action",
 						"ContextMenu": {
 							"Items": [],
 							"PerformFirstActionWithFullSwipe": true
-						}
+						},
+						"Title": "{nombre}",
+						"Footnote": "{valor}",
+						"DetailImage": "/DreamsBank/Images/lh.jpg",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Productos/NavToProductos_Detail.action"
 					},
 					"Search": {
 						"Enabled": true,

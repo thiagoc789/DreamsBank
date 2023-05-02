@@ -114,7 +114,6 @@
 							"Separator": true,
 							"Title": "Crear Transacción",
 							"TextAlignment": "Center",
-							"ButtonType": "Primary",
 							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Create_Transaccion.action"
 						}
 					],

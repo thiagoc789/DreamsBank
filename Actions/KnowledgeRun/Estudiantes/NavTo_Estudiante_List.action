@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavTo_Estudiante_List"
+	},
+	"PageToOpen": "/DreamsBank/Pages/KnowledgeRun/Estudiante/Estudiante_List.page"
+}

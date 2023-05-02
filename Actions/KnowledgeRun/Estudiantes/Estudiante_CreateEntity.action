@@ -1,0 +1,21 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"OnFailure": "/DreamsBank/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/DreamsBank/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"Service": "/DreamsBank/Services/dreamsbankkk.service",
+		"EntitySet": "Estudiante"
+	},
+	"Properties": {
+		"cedula": "#Page:Estudiante_Create/#Control:Fc_Estudiante_Cedula/#Value",
+		"nombre": "#Page:Estudiante_Create/#Control:Fc_Estudiante_Nombre/#Value",
+		"apellido": "#Page:Estudiante_Create/#Control:Fc_Estudiante_Apellido/#Value",
+		"email": "#Page:Estudiante_Create/#Control:Fc_Estudiante_Email/#Value",
+		"fecha_nacimiento": "#Page:Estudiante_Create/#Control:Fc_Estudiante_FechaNacimiento/#Value",
+		"universidad": "#Page:Estudiante_Create/#Control:Fc_Estudiante_Universidad/#Value",
+		"carrera": "#Page:Estudiante_Create/#Control:Fc_Estudiante_Carrera/#Value"
+	}
+}

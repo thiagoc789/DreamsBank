@@ -1,80 +1,89 @@
 {
-	"ActionBar": {
-		"Items": [
-			{
-				"OnPress": "/DreamsBank/Actions/CloseModalPage_Cancel.action",
-				"Position": "Left",
-				"SystemItem": "Cancel"
-			},
-			{
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/Beneficiarios_CreateEntity.action",
-				"Position": "Right",
-				"SystemItem": "Save"
-			}
-		]
-	},
-	"Caption": "Create Beneficiarios Detail",
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
-					"_Type": "Section.Type.FormCell",
-					"_Name": "SectionFormCell0",
-					"Visible": true,
 					"Controls": [
 						{
-							"Caption": "cedula",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "cedula",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "cedula"
 						},
 						{
-							"Caption": "nombre",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "nombre",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "nombre"
 						},
 						{
-							"Caption": "edad",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "edad",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "edad"
 						},
 						{
-							"Caption": "carrera",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "carrera",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "carrera"
 						},
 						{
-							"Caption": "semestre",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "semestre",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "semestre"
 						},
 						{
-							"Caption": "universidad",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "universidad",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "universidad"
 						},
 						{
-							"Caption": "telefono",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "telefono",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "telefono"
 						},
 						{
-							"Caption": "correo",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "correo",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "correo"
 						},
 						{
-							"Caption": "id_aporte",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "id_aporte",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "id_aporte"
 						}
-					]
+					],
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
 				}
-			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
+			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Beneficiarios_Create",
-	"PrefersLargeCaption": true
+	"Caption": "Create Beneficiarios Detail",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/Beneficiarios_CreateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }

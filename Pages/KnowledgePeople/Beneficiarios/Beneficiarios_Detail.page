@@ -1,96 +1,114 @@
 {
-	"Caption": "Beneficiarios Detail",
 	"DesignTimeTarget": {
 		"Service": "/DreamsBank/Services/dreamsbankkk.service",
 		"EntitySet": "Beneficiarios",
 		"QueryOptions": ""
 	},
-	"ActionBar": {
-		"Items": [
-			{
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_Edit.action",
-				"Position": "Right",
-				"SystemItem": "Edit"
-			},
-			{
-				"OnPress": "/DreamsBank/Rules/Beneficiarios/Beneficiarios_DeleteConfirmation.js",
-				"Position": "Right",
-				"SystemItem": "Trash"
-			}
-		]
-	},
 	"Controls": [
 		{
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
 			"Sections": [
 				{
 					"ObjectHeader": {
-						"Tags": [],
-						"DetailImage": "",
-						"HeadlineText": "{cedula}",
 						"Subhead": "{nombre}",
-						"BodyText": "",
 						"Footnote": "{carrera}",
 						"Description": "{edad}",
 						"StatusText": "{semestre}",
-						"StatusImage": "",
-						"SubstatusImage": "",
-						"SubstatusText": "{universidad}"
+						"SubstatusText": "{universidad}",
+						"Tags": [],
+						"HeadlineText": "{cedula}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
 					},
-					"_Type": "Section.Type.ObjectHeader"
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0"
 				},
 				{
 					"KeyAndValues": [
 						{
-							"KeyName": "cedula",
-							"Value": "{cedula}"
+							"Value": "{cedula}",
+							"_Name": "KeyValue0",
+							"KeyName": "cedula"
 						},
 						{
-							"KeyName": "nombre",
-							"Value": "{nombre}"
+							"Value": "{nombre}",
+							"_Name": "KeyValue1",
+							"KeyName": "nombre"
 						},
 						{
-							"KeyName": "edad",
-							"Value": "{edad}"
+							"Value": "{edad}",
+							"_Name": "KeyValue2",
+							"KeyName": "edad"
 						},
 						{
-							"KeyName": "carrera",
-							"Value": "{carrera}"
+							"Value": "{carrera}",
+							"_Name": "KeyValue3",
+							"KeyName": "carrera"
 						},
 						{
-							"KeyName": "semestre",
-							"Value": "{semestre}"
+							"Value": "{semestre}",
+							"_Name": "KeyValue4",
+							"KeyName": "semestre"
 						},
 						{
-							"KeyName": "universidad",
-							"Value": "{universidad}"
+							"Value": "{universidad}",
+							"_Name": "KeyValue5",
+							"KeyName": "universidad"
 						},
 						{
-							"KeyName": "telefono",
-							"Value": "{telefono}"
+							"Value": "{telefono}",
+							"_Name": "KeyValue6",
+							"KeyName": "telefono"
 						},
 						{
-							"KeyName": "correo",
-							"Value": "{correo}"
+							"Value": "{correo}",
+							"_Name": "KeyValue7",
+							"KeyName": "correo"
 						},
 						{
-							"KeyName": "id_aporte",
-							"Value": "{id_aporte}"
+							"Value": "{id_aporte}",
+							"_Name": "KeyValue8",
+							"KeyName": "id_aporte"
 						}
 					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"EmptySection": {
+						"FooterVisible": false
+					},
 					"Layout": {
 						"NumberOfColumns": 2
-					},
-					"MaxItemCount": 1,
-					"_Name": "SectionKeyValue0",
-					"_Type": "Section.Type.KeyValue"
+					}
 				}
-			],
-			"DataSubscriptions": [],
-			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable"
+			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Beneficiarios_Detail",
-	"PrefersLargeCaption": true
+	"Caption": "Beneficiarios Detail",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Trash",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Rules/Beneficiarios/Beneficiarios_DeleteConfirmation.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }

@@ -1,63 +1,272 @@
-<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
         <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
     </edmx:Reference>
     <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
         <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
     </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Validation.V1.xml">
+        <edmx:Include Alias="Validation" Namespace="Org.OData.Validation.V1"/>
+    </edmx:Reference>
     <edmx:DataServices>
-        <Schema Namespace="MyService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="MyService">
             <EntityContainer Name="EntityContainer">
-                <EntitySet Name="Beneficiarios" EntityType="MyService.Beneficiarios"/>
-                <EntitySet Name="Aportantes" EntityType="MyService.Aportantes"/>
-                <EntitySet Name="Productos" EntityType="MyService.Productos"/>
-                <EntitySet Name="Transacciones" EntityType="MyService.Transacciones"/>
+                <EntitySet EntityType="MyService.Beneficiarios" Name="Beneficiarios"/>
+                <EntitySet EntityType="MyService.Aportantes" Name="Aportantes"/>
+                <EntitySet EntityType="MyService.Productos" Name="Productos"/>
+                <EntitySet EntityType="MyService.Transacciones" Name="Transacciones"/>
+                <EntitySet EntityType="MyService.Estudiante" Name="Estudiante"/>
+                <EntitySet EntityType="MyService.Empresa" Name="Empresa"/>
+                <EntitySet EntityType="MyService.Oportunidad" Name="Oportunidad">
+                    <NavigationPropertyBinding Path="id_empresa" Target="Empresa"/>
+                </EntitySet>
+                <EntitySet EntityType="MyService.Postulacion" Name="Postulacion">
+                    <NavigationPropertyBinding Path="id_estudiante" Target="Estudiante"/>
+                    <NavigationPropertyBinding Path="id_oportunidad" Target="Oportunidad"/>
+                </EntitySet>
             </EntityContainer>
             <EntityType Name="Beneficiarios">
                 <Key>
                     <PropertyRef Name="cedula"/>
                 </Key>
-                <Property Name="cedula" Type="Edm.String" MaxLength="10" Nullable="false"/>
-                <Property Name="nombre" Type="Edm.String" MaxLength="100"/>
-                <Property Name="edad" Type="Edm.String" MaxLength="10"/>
-                <Property Name="carrera" Type="Edm.String" MaxLength="100"/>
-                <Property Name="semestre" Type="Edm.String" MaxLength="10"/>
-                <Property Name="universidad" Type="Edm.String" MaxLength="100"/>
-                <Property Name="telefono" Type="Edm.String" MaxLength="20"/>
-                <Property Name="correo" Type="Edm.String" MaxLength="100"/>
-                <Property Name="id_aporte" Type="Edm.String" MaxLength="10"/>
+                <Property MaxLength="10" Name="cedula" Nullable="false" Type="Edm.String"/>
+                <Property MaxLength="100" Name="nombre" Type="Edm.String"/>
+                <Property MaxLength="10" Name="edad" Type="Edm.String"/>
+                <Property MaxLength="100" Name="carrera" Type="Edm.String"/>
+                <Property MaxLength="10" Name="semestre" Type="Edm.String"/>
+                <Property MaxLength="100" Name="universidad" Type="Edm.String"/>
+                <Property MaxLength="20" Name="telefono" Type="Edm.String"/>
+                <Property MaxLength="100" Name="correo" Type="Edm.String"/>
+                <Property MaxLength="10" Name="id_aporte" Type="Edm.String"/>
+                <Property Name="createdBy" Type="Edm.String"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="modifiedBy" Type="Edm.String"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset"/>
             </EntityType>
             <EntityType Name="Aportantes">
                 <Key>
                     <PropertyRef Name="cedula"/>
                 </Key>
-                <Property Name="cedula" Type="Edm.String" MaxLength="10" Nullable="false"/>
-                <Property Name="nombre" Type="Edm.String" MaxLength="100"/>
-                <Property Name="edad" Type="Edm.String" MaxLength="10"/>
-                <Property Name="empresa" Type="Edm.String" MaxLength="100"/>
-                <Property Name="telefono" Type="Edm.String" MaxLength="20"/>
-                <Property Name="correo" Type="Edm.String" MaxLength="100"/>
+                <Property MaxLength="10" Name="cedula" Nullable="false" Type="Edm.String"/>
+                <Property MaxLength="100" Name="nombre" Type="Edm.String"/>
+                <Property MaxLength="10" Name="edad" Type="Edm.String"/>
+                <Property MaxLength="100" Name="empresa" Type="Edm.String"/>
+                <Property MaxLength="20" Name="telefono" Type="Edm.String"/>
+                <Property MaxLength="100" Name="correo" Type="Edm.String"/>
+                <Property Name="createdBy" Type="Edm.String"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="modifiedBy" Type="Edm.String"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset"/>
             </EntityType>
             <EntityType Name="Productos">
                 <Key>
                     <PropertyRef Name="id"/>
                 </Key>
-                <Property Name="id" Type="Edm.String" MaxLength="10" Nullable="false"/>
-                <Property Name="nombre" Type="Edm.String" MaxLength="100"/>
-                <Property Name="descripcion" Type="Edm.String" MaxLength="500"/>
-                <Property Name="valor" Type="Edm.String" MaxLength="100"/>
+                <Property Name="id" Nullable="false" Type="Edm.Guid"/>
+                <Property MaxLength="100" Name="nombre" Type="Edm.String"/>
+                <Property MaxLength="500" Name="descripcion" Type="Edm.String"/>
+                <Property MaxLength="100" Name="valor" Type="Edm.String"/>
+                <Property Name="createdBy" Type="Edm.String"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="modifiedBy" Type="Edm.String"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset"/>
             </EntityType>
             <EntityType Name="Transacciones">
                 <Key>
                     <PropertyRef Name="id"/>
                 </Key>
-                <Property Name="id" Type="Edm.String" MaxLength="10" Nullable="false"/>
-                <Property Name="beneficiario" Type="Edm.String" MaxLength="10"/>
-                <Property Name="aportante" Type="Edm.String" MaxLength="10"/>
-                <Property Name="producto" Type="Edm.String" MaxLength="10"/>
-                <Property Name="estado" Type="Edm.String" MaxLength="20"/>
+                <Property Name="id" Nullable="false" Type="Edm.Guid"/>
+                <Property MaxLength="10" Name="beneficiario" Type="Edm.String"/>
+                <Property MaxLength="10" Name="aportante" Type="Edm.String"/>
+                <Property MaxLength="10" Name="producto" Type="Edm.String"/>
+                <Property MaxLength="20" Name="estado" Type="Edm.String"/>
+                <Property Name="createdBy" Type="Edm.String"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="modifiedBy" Type="Edm.String"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset"/>
             </EntityType>
+            <EntityType Name="Estudiante">
+                <Key>
+                    <PropertyRef Name="cedula"/>
+                </Key>
+                <Property MaxLength="100" Name="cedula" Nullable="false" Type="Edm.String"/>
+                <Property MaxLength="100" Name="nombre" Type="Edm.String"/>
+                <Property MaxLength="100" Name="apellido" Type="Edm.String"/>
+                <Property MaxLength="100" Name="email" Type="Edm.String"/>
+                <Property Name="fecha_nacimiento" Type="Edm.Date"/>
+                <Property MaxLength="150" Name="universidad" Type="Edm.String"/>
+                <Property MaxLength="150" Name="carrera" Type="Edm.String"/>
+                <Property Name="createdBy" Type="Edm.String"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="modifiedBy" Type="Edm.String"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset"/>
+            </EntityType>
+            <EntityType Name="Empresa">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property MaxLength="100" Name="id" Nullable="false" Type="Edm.String"/>
+                <Property MaxLength="150" Name="nombre" Type="Edm.String"/>
+                <Property MaxLength="100" Name="industria" Type="Edm.String"/>
+                <Property MaxLength="50" Name="pais" Type="Edm.String"/>
+                <Property MaxLength="100" Name="email" Type="Edm.String"/>
+                <Property MaxLength="20" Name="telefono" Type="Edm.String"/>
+                <Property Name="createdBy" Type="Edm.String"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="modifiedBy" Type="Edm.String"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset"/>
+            </EntityType>
+            <EntityType Name="Oportunidad">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Nullable="false" Type="Edm.Guid"/>
+                <NavigationProperty Name="id_empresa" Type="MyService.Empresa">
+                    <ReferentialConstraint Property="id_empresa_id" ReferencedProperty="id"/>
+                </NavigationProperty>
+                <Property MaxLength="100" Name="id_empresa_id" Type="Edm.String"/>
+                <Property Name="tipo" Type="Edm.String"/>
+                <Property MaxLength="1000" Name="descripcion" Type="Edm.String"/>
+                <Property MaxLength="1000" Name="requisitos" Type="Edm.String"/>
+                <Property Name="createdBy" Type="Edm.String"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="modifiedBy" Type="Edm.String"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset"/>
+            </EntityType>
+            <EntityType Name="Postulacion">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Nullable="false" Type="Edm.Guid"/>
+                <NavigationProperty Name="id_estudiante" Type="MyService.Estudiante">
+                    <ReferentialConstraint Property="id_estudiante_cedula" ReferencedProperty="cedula"/>
+                </NavigationProperty>
+                <Property MaxLength="100" Name="id_estudiante_cedula" Type="Edm.String"/>
+                <NavigationProperty Name="id_oportunidad" Type="MyService.Oportunidad">
+                    <ReferentialConstraint Property="id_oportunidad_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="id_oportunidad_ID" Type="Edm.Guid"/>
+                <Property MaxLength="50" Name="estado" Type="Edm.String"/>
+                <Property Name="createdBy" Type="Edm.String"/>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
+                <Property Name="modifiedBy" Type="Edm.String"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset"/>
+            </EntityType>
+            <Annotations Target="MyService.Beneficiarios/createdBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Beneficiarios/createdAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Beneficiarios/modifiedBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Beneficiarios/modifiedAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Aportantes/createdBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Aportantes/createdAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Aportantes/modifiedBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Aportantes/modifiedAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Productos/createdBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Productos/createdAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Productos/modifiedBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Productos/modifiedAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Transacciones/createdBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Transacciones/createdAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Transacciones/modifiedBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Transacciones/modifiedAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Estudiante/createdBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Estudiante/createdAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Estudiante/modifiedBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Estudiante/modifiedAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Empresa/createdBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Empresa/createdAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Empresa/modifiedBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Empresa/modifiedAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Oportunidad/tipo">
+                <Annotation Term="Validation.AllowedValues">
+                    <Collection>
+                        <Record Type="Validation.AllowedValue">
+                            <Annotation String="Practica" Term="Core.SymbolicName"/>
+                            <PropertyValue Property="Value" String="Practica"/>
+                        </Record>
+                        <Record Type="Validation.AllowedValue">
+                            <Annotation String="Pasantia" Term="Core.SymbolicName"/>
+                            <PropertyValue Property="Value" String="Pasantia"/>
+                        </Record>
+                        <Record Type="Validation.AllowedValue">
+                            <Annotation String="Primer_Empleo" Term="Core.SymbolicName"/>
+                            <PropertyValue Property="Value" String="Primer_Empleo"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="MyService.Oportunidad/createdBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Oportunidad/createdAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Oportunidad/modifiedBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Oportunidad/modifiedAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Postulacion/createdBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Postulacion/createdAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Postulacion/modifiedBy">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
+            <Annotations Target="MyService.Postulacion/modifiedAt">
+                <Annotation Bool="true" Term="Core.Computed"/>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

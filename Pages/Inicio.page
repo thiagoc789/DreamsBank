@@ -56,7 +56,8 @@
 							"_Name": "SectionButton1",
 							"Title": "Knowledge Run",
 							"TextAlignment": "Center",
-							"Visible": true
+							"Visible": true,
+							"OnPress": "/DreamsBank/Actions/KnowledgeRun/NavTo_KR.action"
 						},
 						{
 							"_Name": "SectionButton2",
@@ -78,6 +79,7 @@
 	"_Type": "Page",
 	"_Name": "Inicio",
 	"Caption": "Inicio",
+	"OnLoaded": "/DreamsBank/Rules/generar_aleatorio.js",
 	"ToolBar": {
 		"Items": [
 			{

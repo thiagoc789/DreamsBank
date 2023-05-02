@@ -2,7 +2,7 @@
 	"Onboarding": {
 		"Schema": "sapmobilesvcs",
 		"TimeZone": "UTC",
-		"URL": ""
+		"URL": "sapmobilesvcs://?AppId=dreamsBank&ClientId=b9d55397-23c6-45a3-850b-ccc91d229d4b&ServerUrl=https://27c46edatrial-dev-dreamsbank.cfapps.us10.hana.ondemand.com&SapCloudPlatformEndpoint=https://27c46edatrial-dev-dreamsbank.cfapps.us10.hana.ondemand.com&AuthorizationEndpointUrl=https://27c46edatrial-dev-dreamsbank.cfapps.us10.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://27c46edatrial-dev-dreamsbank.cfapps.us10.hana.ondemand.com&TokenUrl=https://27c46edatrial-dev-dreamsbank.cfapps.us10.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
 	},
 	"CF": {
 		"Target": "https://api.cf.us10.hana.ondemand.com",
@@ -29,7 +29,9 @@
 		"Type": "standard",
 		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/7ac0ee64-3c8c-4c5b-9051-3a3bbe35c694/space/b5d158a7-c130-49b9-9ebb-0cc94f96d412",
 		"AppId": "dreamsBank",
-		"Destination": []
+		"Destination": [
+			"dreamsbankkk"
+		]
 	},
 	"Build": {
 		"SourceMap": false,
