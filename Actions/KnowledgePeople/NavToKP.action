@@ -1,8 +1,0 @@
-{
-	"_Type": "Action.Type.Navigation",
-	"ActionResult": {
-		"_Name": "NavToKP"
-	},
-	"PageToOpen": "/DreamsBank/Pages/KnowledgePeople/KP.page",
-	"NavigationType": "Inner"
-}

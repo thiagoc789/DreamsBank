@@ -47,7 +47,7 @@
 							"Semantic": "Tint",
 							"Visible": true,
 							"OnPress": {
-								"Handler": "/DreamsBank/Actions/KnowledgePeople/NavToKP.action",
+								"Handler": "/DreamsBank/Actions/KnowledgePeople/NavToMenu.action",
 								"UserInteraction": {
 									"Enabled": true,
 									"Title": "Button"

@@ -1,0 +1,115 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/DreamsBank/Services/dreamsbankkk.service",
+		"EntitySet": "Aspirante",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"Subhead": "{nombre}",
+						"Footnote": "{carrera}",
+						"Description": "{edad}",
+						"StatusText": "{semestre}",
+						"SubstatusText": "{universidad}",
+						"HeadlineText": "{cedula}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{cedula}",
+							"_Name": "KeyValue0",
+							"KeyName": "cedula"
+						},
+						{
+							"Value": "{nombre}",
+							"_Name": "KeyValue1",
+							"KeyName": "nombre"
+						},
+						{
+							"Value": "{edad}",
+							"_Name": "KeyValue2",
+							"KeyName": "edad"
+						},
+						{
+							"Value": "{carrera}",
+							"_Name": "KeyValue3",
+							"KeyName": "carrera"
+						},
+						{
+							"Value": "{semestre}",
+							"_Name": "KeyValue4",
+							"KeyName": "semestre"
+						},
+						{
+							"Value": "{universidad}",
+							"_Name": "KeyValue5",
+							"KeyName": "universidad"
+						},
+						{
+							"Value": "{telefono}",
+							"_Name": "KeyValue6",
+							"KeyName": "telefono"
+						},
+						{
+							"Value": "{correo}",
+							"_Name": "KeyValue7",
+							"KeyName": "correo"
+						},
+						{
+							"Value": "{id_producto}",
+							"_Name": "KeyValue8",
+							"KeyName": "id_aporte"
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Aspirante_Detail",
+	"Caption": "Aspirante Detail",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Aspirante/NavToAspirante_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Trash",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Rules/KnowledgePeople/Datos_Maestros/Aspirante/Aspirante_DeleteConfirmation.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	},
+	"PrefersLargeCaption": true
+}

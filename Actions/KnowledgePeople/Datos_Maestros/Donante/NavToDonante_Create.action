@@ -1,0 +1,6 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"PageToOpen": "/DreamsBank/Pages/KnowledgePeople/Datos_Maestros/Donante/Donante_Create.page",
+	"ModalPage": true,
+	"ModalPageFullscreen": false
+}

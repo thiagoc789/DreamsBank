@@ -1,0 +1,65 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Description": "Se registran Donantes, Aspirantes Y Productos",
+						"DetailImage": "sap-icon://add-contact",
+						"DetailImageIsCircular": false,
+						"HeadlineText": "Datos Maestros",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading",
+						"Styles": {
+							"HeadlineText": "HeadlineText"
+						}
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Buttons": [
+						{
+							"_Name": "SectionButton0",
+							"Title": "Donante",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Donante/NavToDonante_List.action"
+						},
+						{
+							"_Name": "SectionButton1",
+							"Title": "Aspirante",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Aspirante/NavToAspirante_List.action"
+						},
+						{
+							"_Name": "SectionButton2",
+							"Title": "Productos",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Productos/NavToProductos_List.action"
+						}
+					]
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Main",
+	"Caption": "Knowledge People",
+	"PrefersLargeCaption": true
+}
