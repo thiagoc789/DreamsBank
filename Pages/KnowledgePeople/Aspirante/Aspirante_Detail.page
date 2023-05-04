@@ -1,7 +1,7 @@
 {
 	"DesignTimeTarget": {
 		"Service": "/DreamsBank/Services/dreamsbankkk.service",
-		"EntitySet": "Beneficiarios",
+		"EntitySet": "Aspirante",
 		"QueryOptions": ""
 	},
 	"Controls": [
@@ -12,12 +12,12 @@
 			"Sections": [
 				{
 					"ObjectHeader": {
+						"Tags": [],
 						"Subhead": "{nombre}",
 						"Footnote": "{carrera}",
 						"Description": "{edad}",
 						"StatusText": "{semestre}",
 						"SubstatusText": "{universidad}",
-						"Tags": [],
 						"HeadlineText": "{cedula}",
 						"StatusPosition": "Stacked",
 						"StatusImagePosition": "Leading",
@@ -69,7 +69,7 @@
 							"KeyName": "correo"
 						},
 						{
-							"Value": "{id_aporte}",
+							"Value": "{id_producto}",
 							"_Name": "KeyValue8",
 							"KeyName": "id_aporte"
 						}
@@ -88,8 +88,8 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Beneficiarios_Detail",
-	"Caption": "Beneficiarios Detail",
+	"_Name": "Aspirante_Detail",
+	"Caption": "Aspirante Detail",
 	"ActionBar": {
 		"Items": [
 			{
@@ -98,7 +98,7 @@
 				"SystemItem": "Edit",
 				"Position": "Right",
 				"IsIconCircular": false,
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_Edit.action"
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aspirante/NavToAspirante_Edit.action"
 			},
 			{
 				"_Name": "ActionBarItem1",
@@ -106,9 +106,10 @@
 				"SystemItem": "Trash",
 				"Position": "Right",
 				"IsIconCircular": false,
-				"OnPress": "/DreamsBank/Rules/Beneficiarios/Beneficiarios_DeleteConfirmation.js"
+				"OnPress": "/DreamsBank/Rules/Aspirante/Aspirante_DeleteConfirmation.js"
 			}
 		],
 		"_Name": "ActionBar1"
-	}
+	},
+	"PrefersLargeCaption": true
 }

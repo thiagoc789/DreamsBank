@@ -63,8 +63,8 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Beneficiarios_Create",
-	"Caption": "Create Beneficiarios Detail",
+	"_Name": "Aspirante_Create",
+	"Caption": "Create Aspirante Detail",
 	"ActionBar": {
 		"Items": [
 			{
@@ -81,9 +81,10 @@
 				"SystemItem": "Save",
 				"Position": "Right",
 				"IsIconCircular": false,
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/Beneficiarios_CreateEntity.action"
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aspirante/Aspirante_CreateEntity.action"
 			}
 		],
 		"_Name": "ActionBar1"
-	}
+	},
+	"PrefersLargeCaption": true
 }

@@ -13,8 +13,8 @@
 			"AutomaticallyRetrievesStreams": false
 		},
 		{
-			"Name": "Aportantes",
-			"Query": "Aportantes",
+			"Name": "Donante",
+			"Query": "Donante",
 			"AutomaticallyRetrievesStreams": false
 		},
 		{

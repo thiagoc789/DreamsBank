@@ -35,9 +35,11 @@
 						{
 							"_Name": "SectionButton0",
 							"Title": "Estudiantes",
-							"TextAlignment": "Center",
+							"Alignment": "Center",
 							"Visible": true,
-							"OnPress": "/DreamsBank/Actions/KnowledgeRun/Estudiantes/NavTo_Estudiante_List.action"
+							"OnPress": "/DreamsBank/Actions/KnowledgeRun/Estudiantes/NavTo_Estudiante_List.action",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						}
 					],
 					"Layout": {
@@ -50,5 +52,6 @@
 	],
 	"_Type": "Page",
 	"_Name": "KR",
-	"Caption": "Knowledge Run"
+	"Caption": "Knowledge Run",
+	"PrefersLargeCaption": true
 }

@@ -11,8 +11,8 @@
 	},
 	"Properties": {
 		"id": "/DreamsBank/Rules/generar_aleatorio.js",
-		"beneficiario": "#Control:Fc_listpicker_beneficiario_KP/#SelectedValue",
-		"aportante": "#Control:Fc_listpicker_aportante_KP/#SelectedValue",
+		"aspirante": "#Control:Fc_listpicker_beneficiario_KP/#SelectedValue",
+		"donante": "#Control:Fc_listpicker_aportante_KP/#SelectedValue",
 		"producto": "#Control:Fc_listpicker_producto_KP/#SelectedValue",
 		"estado": "Enviado"
 	}

@@ -1,8 +1,8 @@
 {
-	"Caption": "Update Beneficiarios Detail",
+	"Caption": "Update Aspirante Detail",
 	"DesignTimeTarget": {
 		"Service": "/DreamsBank/Services/dreamsbankkk.service",
-		"EntitySet": "Beneficiarios",
+		"EntitySet": "Aspirante",
 		"QueryOptions": ""
 	},
 	"ActionBar": {
@@ -15,7 +15,7 @@
 			{
 				"Position": "Right",
 				"SystemItem": "Save",
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/Beneficiarios_UpdateEntity.action"
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aspirante/Aspirante_UpdateEntity.action"
 			}
 		]
 	},
@@ -79,7 +79,7 @@
 						{
 							"Caption": "id_aporte",
 							"_Name": "id_aporte",
-							"Value": "{id_aporte}",
+							"Value": "{id_producto}",
 							"_Type": "Control.Type.FormCell.SimpleProperty"
 						}
 					]
@@ -90,6 +90,6 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Beneficiarios_Edit",
+	"_Name": "Aspirante_Edit",
 	"PrefersLargeCaption": true
 }

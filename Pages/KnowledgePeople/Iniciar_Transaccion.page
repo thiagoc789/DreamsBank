@@ -27,7 +27,7 @@
 							"PickerItems": {
 								"Target": {
 									"Service": "/DreamsBank/Services/dreamsbankkk.service",
-									"EntitySet": "Aportantes",
+									"EntitySet": "Donante",
 									"ServerSidePaging": true
 								},
 								"ObjectCell": {
@@ -37,13 +37,13 @@
 									"Footnote": "{edad}",
 									"Icons": [],
 									"PreserveIconStackSpacing": true,
-									"StatusText": "{cedula}",
+									"StatusText": "{identificacion}",
 									"Styles": {},
 									"Subhead": "{empresa}",
 									"SubstatusText": "{telefono}",
 									"Title": "{nombre}"
 								},
-								"ReturnValue": "{cedula}"
+								"ReturnValue": "{identificacion}"
 							}
 						},
 						{
@@ -66,7 +66,7 @@
 							"PickerItems": {
 								"Target": {
 									"Service": "/DreamsBank/Services/dreamsbankkk.service",
-									"EntitySet": "Beneficiarios",
+									"EntitySet": "Aspirante",
 									"ServerSidePaging": true
 								},
 								"ObjectCell": {
@@ -113,8 +113,10 @@
 							"IsVisible": true,
 							"Separator": true,
 							"Title": "Crear Transacción",
-							"TextAlignment": "Center",
-							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Create_Transaccion.action"
+							"Alignment": "Center",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Create_Transaccion.action",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						}
 					],
 					"Visible": true

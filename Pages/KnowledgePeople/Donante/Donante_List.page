@@ -11,7 +11,7 @@
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
-						"EntitySet": "Beneficiarios",
+						"EntitySet": "Donante",
 						"Service": "/DreamsBank/Services/dreamsbankkk.service",
 						"QueryOptions": ""
 					},
@@ -21,16 +21,22 @@
 						"FooterVisible": false
 					},
 					"ObjectCell": {
-						"Title": "{cedula}",
+						"Title": "{identificacion}",
 						"Subhead": "{nombre}",
-						"Footnote": "{carrera}",
+						"Footnote": "{empresa}",
 						"Description": "{edad}",
-						"StatusText": "{semestre}",
-						"SubstatusText": "{universidad}",
-						"DetailImage": "https://cdn-icons-png.flaticon.com/512/5850/5850276.png",
+						"StatusText": "{telefono}",
+						"SubstatusText": "{correo}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "https://cdn-icons-png.flaticon.com/512/306/306473.png"
+								}
+							]
+						},
 						"PreserveIconStackSpacing": false,
 						"AccessoryType": "disclosureIndicator",
-						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_Detail.action",
+						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Donante/NavToDonante_Detail.action",
 						"ContextMenu": {
 							"Items": [],
 							"PerformFirstActionWithFullSwipe": true
@@ -56,8 +62,8 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Beneficiarios_List",
-	"Caption": "Beneficiarios",
+	"_Name": "Donante_List",
+	"Caption": "Donante",
 	"ActionBar": {
 		"Items": [
 			{
@@ -66,9 +72,10 @@
 				"SystemItem": "Add",
 				"Position": "Right",
 				"IsIconCircular": false,
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_Create.action"
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Donante/NavToDonante_Create.action"
 			}
 		],
 		"_Name": "ActionBar1"
-	}
+	},
+	"PrefersLargeCaption": true
 }

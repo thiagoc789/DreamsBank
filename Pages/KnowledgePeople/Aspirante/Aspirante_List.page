@@ -11,7 +11,7 @@
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
-						"EntitySet": "Aportantes",
+						"EntitySet": "Aspirante",
 						"Service": "/DreamsBank/Services/dreamsbankkk.service",
 						"QueryOptions": ""
 					},
@@ -23,14 +23,20 @@
 					"ObjectCell": {
 						"Title": "{cedula}",
 						"Subhead": "{nombre}",
-						"Footnote": "{empresa}",
+						"Footnote": "{carrera}",
 						"Description": "{edad}",
-						"StatusText": "{telefono}",
-						"SubstatusText": "{correo}",
-						"DetailImage": "https://cdn-icons-png.flaticon.com/512/306/306473.png",
+						"StatusText": "{semestre}",
+						"SubstatusText": "{universidad}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "https://cdn-icons-png.flaticon.com/512/5850/5850276.png"
+								}
+							]
+						},
 						"PreserveIconStackSpacing": false,
 						"AccessoryType": "disclosureIndicator",
-						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aportantes/NavToAportantes_Detail.action",
+						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aspirante/NavToAspirante_Detail.action",
 						"ContextMenu": {
 							"Items": [],
 							"PerformFirstActionWithFullSwipe": true
@@ -56,8 +62,8 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Aportantes_List",
-	"Caption": "Aportantes",
+	"_Name": "Aspirante_List",
+	"Caption": "Aspirante",
 	"ActionBar": {
 		"Items": [
 			{
@@ -66,9 +72,10 @@
 				"SystemItem": "Add",
 				"Position": "Right",
 				"IsIconCircular": false,
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aportantes/NavToAportantes_Create.action"
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aspirante/NavToAspirante_Create.action"
 			}
 		],
 		"_Name": "ActionBar1"
-	}
+	},
+	"PrefersLargeCaption": true
 }

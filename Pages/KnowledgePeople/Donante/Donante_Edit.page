@@ -1,8 +1,8 @@
 {
-	"Caption": "Update Aportantes Detail",
+	"Caption": "Update Donante Detail",
 	"DesignTimeTarget": {
 		"Service": "/DreamsBank/Services/dreamsbankkk.service",
-		"EntitySet": "Aportantes",
+		"EntitySet": "Donante",
 		"QueryOptions": ""
 	},
 	"ActionBar": {
@@ -15,7 +15,7 @@
 			{
 				"Position": "Right",
 				"SystemItem": "Save",
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aportantes/Aportantes_UpdateEntity.action"
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Donante/Donante_UpdateEntity.action"
 			}
 		]
 	},
@@ -28,9 +28,9 @@
 					"Visible": true,
 					"Controls": [
 						{
-							"Caption": "cedula",
-							"_Name": "cedula",
-							"Value": "{cedula}",
+							"Caption": "identificacion",
+							"_Name": "identificacion",
+							"Value": "{identificacion}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"IsEditable": false
 						},
@@ -72,6 +72,6 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Aportantes_Edit",
+	"_Name": "Donante_Edit",
 	"PrefersLargeCaption": true
 }

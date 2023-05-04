@@ -32,8 +32,14 @@
 						"Footnote": "{carrera}",
 						"DisplayDescriptionInMobile": true,
 						"SubstatusText": "{email}",
-						"DetailImage": "https://cdn-icons-png.flaticon.com/512/5850/5850276.png",
-						"DetailImageIsCircular": false,
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "https://cdn-icons-png.flaticon.com/512/5850/5850276.png"
+								}
+							],
+							"ImageIsCircular": false
+						},
 						"PreserveIconStackSpacing": false,
 						"AccessoryType": "none",
 						"OnPress": "/DreamsBank/Actions/KnowledgeRun/Estudiantes/NavTo_Estudiante_Detail.action",
@@ -73,5 +79,6 @@
 			}
 		],
 		"_Name": "ActionBar1"
-	}
+	},
+	"PrefersLargeCaption": true
 }

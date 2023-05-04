@@ -3,18 +3,15 @@
     "OnFailure": "/DreamsBank/Actions/CreateEntityFailureMessage.action",
     "OnSuccess": "/DreamsBank/Actions/CreateEntitySuccessMessage.action",
     "Properties": {
-        "cedula": "#Control:cedula/#Value",
+        "identificacion": "#Control:identificacion/#Value",
         "nombre": "#Control:nombre/#Value",
         "edad": "#Control:edad/#Value",
-        "carrera": "#Control:carrera/#Value",
-        "semestre": "#Control:semestre/#Value",
-        "universidad": "#Control:universidad/#Value",
+        "empresa": "#Control:empresa/#Value",
         "telefono": "#Control:telefono/#Value",
-        "correo": "#Control:correo/#Value",
-        "id_aporte": "#Control:id_aporte/#Value"
+        "correo": "#Control:correo/#Value"
     },
     "Target": {
-        "EntitySet": "Beneficiarios",
+        "EntitySet": "Donante",
         "Service": "/DreamsBank/Services/dreamsbankkk.service"
     },
     "ActionResult": {

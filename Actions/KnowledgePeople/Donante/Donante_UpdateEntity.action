@@ -1,0 +1,20 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "update"
+	},
+	"OnFailure": "/DreamsBank/Actions/UpdateEntityFailureMessage.action",
+	"OnSuccess": "/DreamsBank/Actions/UpdateEntitySuccessMessage.action",
+	"Target": {
+		"EntitySet": "Donante",
+		"Service": "/DreamsBank/Services/dreamsbankkk.service",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"nombre": "#Control:nombre/#Value",
+		"edad": "#Control:edad/#Value",
+		"empresa": "#Control:empresa/#Value",
+		"telefono": "#Control:telefono/#Value",
+		"correo": "#Control:correo/#Value"
+	}
+}

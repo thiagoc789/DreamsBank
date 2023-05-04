@@ -1,19 +1,19 @@
 {
-	"Caption": "Aportantes Detail",
+	"Caption": "Donante Detail",
 	"DesignTimeTarget": {
 		"Service": "/DreamsBank/Services/dreamsbankkk.service",
-		"EntitySet": "Aportantes",
+		"EntitySet": "Donante",
 		"QueryOptions": ""
 	},
 	"ActionBar": {
 		"Items": [
 			{
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aportantes/NavToAportantes_Edit.action",
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Donante/NavToDonante_Edit.action",
 				"Position": "Right",
 				"SystemItem": "Edit"
 			},
 			{
-				"OnPress": "/DreamsBank/Rules/Aportantes/Aportantes_DeleteConfirmation.js",
+				"OnPress": "/DreamsBank/Rules/Donante/Donante_DeleteConfirmation.js",
 				"Position": "Right",
 				"SystemItem": "Trash"
 			}
@@ -26,7 +26,7 @@
 					"ObjectHeader": {
 						"Tags": [],
 						"DetailImage": "",
-						"HeadlineText": "{cedula}",
+						"HeadlineText": "{identificacion}",
 						"Subhead": "{nombre}",
 						"BodyText": "",
 						"Footnote": "{empresa}",
@@ -41,8 +41,8 @@
 				{
 					"KeyAndValues": [
 						{
-							"KeyName": "cedula",
-							"Value": "{cedula}"
+							"KeyName": "identificacion",
+							"Value": "{identificacion}"
 						},
 						{
 							"KeyName": "nombre",
@@ -79,6 +79,6 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Aportantes_Detail",
+	"_Name": "Donante_Detail",
 	"PrefersLargeCaption": true
 }

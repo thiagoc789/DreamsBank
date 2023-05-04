@@ -6,7 +6,7 @@
 			"Sections": [
 				{
 					"ObjectHeader": {
-						"Subhead": "Banco de becas",
+						"Subhead": "Banco de sueños",
 						"Footnote": "0.0.1",
 						"DetailImage": "/DreamsBank/Images/dreamsbank.jpg",
 						"DetailImageIsCircular": true,
@@ -42,7 +42,9 @@
 						{
 							"_Name": "SectionButton0",
 							"Title": "Knowledge People",
-							"TextAlignment": "Center",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
 							"Visible": true,
 							"OnPress": {
 								"Handler": "/DreamsBank/Actions/KnowledgePeople/NavToKP.action",
@@ -55,20 +57,26 @@
 						{
 							"_Name": "SectionButton1",
 							"Title": "Knowledge Run",
-							"TextAlignment": "Center",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
 							"Visible": true,
 							"OnPress": "/DreamsBank/Actions/KnowledgeRun/NavTo_KR.action"
 						},
 						{
 							"_Name": "SectionButton2",
 							"Title": "Knowledge Project",
-							"TextAlignment": "Center",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
 							"Visible": true
 						},
 						{
 							"_Name": "SectionButton3",
 							"Title": "Knowledge Factory",
-							"TextAlignment": "Center",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
 							"Visible": true
 						}
 					]
@@ -79,6 +87,7 @@
 	"_Type": "Page",
 	"_Name": "Inicio",
 	"Caption": "Inicio",
+	"PrefersLargeCaption": true,
 	"OnLoaded": "/DreamsBank/Rules/generar_aleatorio.js",
 	"ToolBar": {
 		"Items": [

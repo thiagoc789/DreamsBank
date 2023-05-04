@@ -12,8 +12,8 @@
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="MyService">
             <EntityContainer Name="EntityContainer">
-                <EntitySet EntityType="MyService.Beneficiarios" Name="Beneficiarios"/>
-                <EntitySet EntityType="MyService.Aportantes" Name="Aportantes"/>
+                <EntitySet EntityType="MyService.Aspirante" Name="Aspirante"/>
+                <EntitySet EntityType="MyService.Donante" Name="Donante"/>
                 <EntitySet EntityType="MyService.Productos" Name="Productos"/>
                 <EntitySet EntityType="MyService.Transacciones" Name="Transacciones"/>
                 <EntitySet EntityType="MyService.Estudiante" Name="Estudiante"/>
@@ -26,7 +26,7 @@
                     <NavigationPropertyBinding Path="id_oportunidad" Target="Oportunidad"/>
                 </EntitySet>
             </EntityContainer>
-            <EntityType Name="Beneficiarios">
+            <EntityType Name="Aspirante">
                 <Key>
                     <PropertyRef Name="cedula"/>
                 </Key>
@@ -38,22 +38,28 @@
                 <Property MaxLength="100" Name="universidad" Type="Edm.String"/>
                 <Property MaxLength="20" Name="telefono" Type="Edm.String"/>
                 <Property MaxLength="100" Name="correo" Type="Edm.String"/>
-                <Property MaxLength="10" Name="id_aporte" Type="Edm.String"/>
+                <Property Name="haAspirado" Type="Edm.Boolean"/>
+                <Property MaxLength="10" Name="id_producto" Type="Edm.String"/>
+                <Property MaxLength="1000" Name="imagen" Type="Edm.String"/>
                 <Property Name="createdBy" Type="Edm.String"/>
                 <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
                 <Property Name="modifiedBy" Type="Edm.String"/>
                 <Property Name="modifiedAt" Type="Edm.DateTimeOffset"/>
             </EntityType>
-            <EntityType Name="Aportantes">
+            <EntityType Name="Donante">
                 <Key>
-                    <PropertyRef Name="cedula"/>
+                    <PropertyRef Name="identificacion"/>
                 </Key>
-                <Property MaxLength="10" Name="cedula" Nullable="false" Type="Edm.String"/>
+                <Property MaxLength="50" Name="identificacion" Nullable="false" Type="Edm.String"/>
+                <Property Name="tipo" Type="Edm.String"/>
                 <Property MaxLength="100" Name="nombre" Type="Edm.String"/>
                 <Property MaxLength="10" Name="edad" Type="Edm.String"/>
                 <Property MaxLength="100" Name="empresa" Type="Edm.String"/>
                 <Property MaxLength="20" Name="telefono" Type="Edm.String"/>
                 <Property MaxLength="100" Name="correo" Type="Edm.String"/>
+                <Property Name="haDonado" Type="Edm.Boolean"/>
+                <Property MaxLength="10" Name="id_producto" Type="Edm.String"/>
+                <Property MaxLength="1000" Name="imagen" Type="Edm.String"/>
                 <Property Name="createdBy" Type="Edm.String"/>
                 <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
                 <Property Name="modifiedBy" Type="Edm.String"/>
@@ -67,6 +73,7 @@
                 <Property MaxLength="100" Name="nombre" Type="Edm.String"/>
                 <Property MaxLength="500" Name="descripcion" Type="Edm.String"/>
                 <Property MaxLength="100" Name="valor" Type="Edm.String"/>
+                <Property MaxLength="1000" Name="imagen" Type="Edm.String"/>
                 <Property Name="createdBy" Type="Edm.String"/>
                 <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
                 <Property Name="modifiedBy" Type="Edm.String"/>
@@ -77,10 +84,12 @@
                     <PropertyRef Name="id"/>
                 </Key>
                 <Property Name="id" Nullable="false" Type="Edm.Guid"/>
-                <Property MaxLength="10" Name="beneficiario" Type="Edm.String"/>
-                <Property MaxLength="10" Name="aportante" Type="Edm.String"/>
+                <Property MaxLength="10" Name="aspirante" Type="Edm.String"/>
+                <Property MaxLength="10" Name="donante" Type="Edm.String"/>
                 <Property MaxLength="10" Name="producto" Type="Edm.String"/>
                 <Property MaxLength="20" Name="estado" Type="Edm.String"/>
+                <Property MaxLength="100" Name="fecha" Type="Edm.String"/>
+                <Property MaxLength="10" Name="avance" Type="Edm.String"/>
                 <Property Name="createdBy" Type="Edm.String"/>
                 <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
                 <Property Name="modifiedBy" Type="Edm.String"/>
@@ -153,28 +162,42 @@
                 <Property Name="modifiedBy" Type="Edm.String"/>
                 <Property Name="modifiedAt" Type="Edm.DateTimeOffset"/>
             </EntityType>
-            <Annotations Target="MyService.Beneficiarios/createdBy">
+            <Annotations Target="MyService.Aspirante/createdBy">
                 <Annotation Bool="true" Term="Core.Computed"/>
             </Annotations>
-            <Annotations Target="MyService.Beneficiarios/createdAt">
+            <Annotations Target="MyService.Aspirante/createdAt">
                 <Annotation Bool="true" Term="Core.Computed"/>
             </Annotations>
-            <Annotations Target="MyService.Beneficiarios/modifiedBy">
+            <Annotations Target="MyService.Aspirante/modifiedBy">
                 <Annotation Bool="true" Term="Core.Computed"/>
             </Annotations>
-            <Annotations Target="MyService.Beneficiarios/modifiedAt">
+            <Annotations Target="MyService.Aspirante/modifiedAt">
                 <Annotation Bool="true" Term="Core.Computed"/>
             </Annotations>
-            <Annotations Target="MyService.Aportantes/createdBy">
+            <Annotations Target="MyService.Donante/tipo">
+                <Annotation Term="Validation.AllowedValues">
+                    <Collection>
+                        <Record Type="Validation.AllowedValue">
+                            <Annotation String="Natural" Term="Core.SymbolicName"/>
+                            <PropertyValue Property="Value" String="Natural"/>
+                        </Record>
+                        <Record Type="Validation.AllowedValue">
+                            <Annotation String="Juridica" Term="Core.SymbolicName"/>
+                            <PropertyValue Property="Value" String="Juridica"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="MyService.Donante/createdBy">
                 <Annotation Bool="true" Term="Core.Computed"/>
             </Annotations>
-            <Annotations Target="MyService.Aportantes/createdAt">
+            <Annotations Target="MyService.Donante/createdAt">
                 <Annotation Bool="true" Term="Core.Computed"/>
             </Annotations>
-            <Annotations Target="MyService.Aportantes/modifiedBy">
+            <Annotations Target="MyService.Donante/modifiedBy">
                 <Annotation Bool="true" Term="Core.Computed"/>
             </Annotations>
-            <Annotations Target="MyService.Aportantes/modifiedAt">
+            <Annotations Target="MyService.Donante/modifiedAt">
                 <Annotation Bool="true" Term="Core.Computed"/>
             </Annotations>
             <Annotations Target="MyService.Productos/createdBy">

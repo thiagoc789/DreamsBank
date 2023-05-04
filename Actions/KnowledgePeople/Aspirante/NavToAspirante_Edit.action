@@ -1,6 +1,6 @@
 {
     "ModalPageFullscreen": false,
     "ModalPage": true,
-    "PageToOpen": "/DreamsBank/Pages/KnowledgePeople/Beneficiarios/Beneficiarios_Edit.page",
+    "PageToOpen": "/DreamsBank/Pages/KnowledgePeople/Aspirante/Aspirante_Edit.page",
     "_Type": "Action.Type.Navigation"
 }

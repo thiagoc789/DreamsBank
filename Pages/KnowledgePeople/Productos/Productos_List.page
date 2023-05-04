@@ -27,7 +27,13 @@
 						},
 						"Title": "{nombre}",
 						"Footnote": "{valor}",
-						"DetailImage": "/DreamsBank/Images/lh.jpg",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "/DreamsBank/Images/lh.jpg"
+								}
+							]
+						},
 						"PreserveIconStackSpacing": false,
 						"AccessoryType": "disclosureIndicator",
 						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Productos/NavToProductos_Detail.action"
@@ -66,5 +72,6 @@
 			}
 		],
 		"_Name": "ActionBar1"
-	}
+	},
+	"PrefersLargeCaption": true
 }

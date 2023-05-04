@@ -1,6 +1,6 @@
 {
     "Target": {
-        "EntitySet": "Beneficiarios",
+        "EntitySet": "Donante",
         "Service": "/DreamsBank/Services/dreamsbankkk.service",
         "ReadLink": "{@odata.readLink}"
     },

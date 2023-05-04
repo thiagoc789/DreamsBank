@@ -7,13 +7,13 @@
 				"SystemItem": "Cancel"
 			},
 			{
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aportantes/Aportantes_CreateEntity.action",
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Donante/Donante_CreateEntity.action",
 				"Position": "Right",
 				"SystemItem": "Save"
 			}
 		]
 	},
-	"Caption": "Create Aportantes Detail",
+	"Caption": "Create Donante Detail",
 	"Controls": [
 		{
 			"Sections": [
@@ -23,8 +23,8 @@
 					"Visible": true,
 					"Controls": [
 						{
-							"Caption": "cedula",
-							"_Name": "cedula",
+							"Caption": "identificacion",
+							"_Name": "identificacion",
 							"_Type": "Control.Type.FormCell.SimpleProperty"
 						},
 						{
@@ -60,6 +60,6 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Aportantes_Create",
+	"_Name": "Donante_Create",
 	"PrefersLargeCaption": true
 }

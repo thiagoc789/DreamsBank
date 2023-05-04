@@ -29,33 +29,41 @@
 					"Buttons": [
 						{
 							"_Name": "SectionButton0",
-							"Title": "Aportantes",
-							"TextAlignment": "Center",
-							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aportantes/NavToAportantes_List.action"
+							"Title": "Donante",
+							"Alignment": "Center",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Donante/NavToDonante_List.action",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						},
 						{
 							"_Name": "SectionButton1",
-							"Title": "Beneficiarios",
-							"TextAlignment": "Center",
-							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Beneficiarios/NavToBeneficiarios_List.action"
+							"Title": "Aspirante",
+							"Alignment": "Center",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Aspirante/NavToAspirante_List.action",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						},
 						{
 							"_Name": "SectionButton2",
 							"Title": "Productos",
-							"TextAlignment": "Center",
-							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Productos/NavToProductos_List.action"
+							"Alignment": "Center",
+							"OnPress": "/DreamsBank/Actions/KnowledgePeople/Productos/NavToProductos_List.action",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						},
 						{
 							"_Name": "SectionButton3",
 							"Title": "Iniciar transacción",
-							"TextAlignment": "Center",
+							"Alignment": "Center",
 							"OnPress": {
 								"Handler": "/DreamsBank/Actions/KnowledgePeople/NavTo_Iniciar_Transaccion.action",
 								"UserInteraction": {
 									"Enabled": true,
 									"Title": "Iniciar transacción"
 								}
-							}
+							},
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						}
 					]
 				}
@@ -64,5 +72,6 @@
 	],
 	"_Type": "Page",
 	"_Name": "Main",
-	"Caption": "Knowledge People"
+	"Caption": "Knowledge People",
+	"PrefersLargeCaption": true
 }
