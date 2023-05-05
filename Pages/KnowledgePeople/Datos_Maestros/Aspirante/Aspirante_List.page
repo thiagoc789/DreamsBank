@@ -21,25 +21,29 @@
 						"FooterVisible": false
 					},
 					"ObjectCell": {
-						"Title": "{cedula}",
-						"Subhead": "{nombre}",
-						"Footnote": "{carrera}",
-						"Description": "{edad}",
-						"StatusText": "{semestre}",
-						"SubstatusText": "{universidad}",
-						"AvatarStack": {
-							"Avatars": [
-								{
-									"Image": "https://cdn-icons-png.flaticon.com/512/5850/5850276.png"
-								}
-							]
-						},
-						"PreserveIconStackSpacing": false,
-						"AccessoryType": "disclosureIndicator",
-						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Aspirante/NavToAspirante_Detail.action",
 						"ContextMenu": {
 							"Items": [],
 							"PerformFirstActionWithFullSwipe": true
+						},
+						"Title": "{cedula}",
+						"Subhead": "{nombre}",
+						"Footnote": "{carrera}",
+						"Description": "/DreamsBank/Rules/KnowledgePeople/Datos_Maestros/Aspirante/haAspirado.js",
+						"StatusText": "{semestre}",
+						"SubstatusText": "{universidad}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"Tags": [],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "{imagen}"
+								}
+							]
+						},
+						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Aspirante/NavToAspirante_Detail.action",
+						"Styles": {
+							"Description": "/DreamsBank/Rules/KnowledgePeople/Datos_Maestros/Aspirante/haAspirado_Style.js"
 						}
 					},
 					"Search": {
@@ -64,6 +68,7 @@
 	"_Type": "Page",
 	"_Name": "Aspirante_List",
 	"Caption": "Aspirante",
+	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{
@@ -76,6 +81,5 @@
 			}
 		],
 		"_Name": "ActionBar1"
-	},
-	"PrefersLargeCaption": true
+	}
 }

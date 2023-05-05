@@ -1,65 +1,98 @@
 {
-	"ActionBar": {
-		"Items": [
-			{
-				"OnPress": "/DreamsBank/Actions/CloseModalPage_Cancel.action",
-				"Position": "Left",
-				"SystemItem": "Cancel"
-			},
-			{
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Donante/Donante_CreateEntity.action",
-				"Position": "Right",
-				"SystemItem": "Save"
-			}
-		]
-	},
-	"Caption": "Create Donante Detail",
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
-					"_Type": "Section.Type.FormCell",
-					"_Name": "SectionFormCell0",
-					"Visible": true,
 					"Controls": [
 						{
-							"Caption": "identificacion",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "Fc_tipo_persona",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Tipo de persona",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Seleccione su tipo de persona",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": [
+								"Natural",
+								"Juridica"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "identificacion",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "identificacion"
 						},
 						{
-							"Caption": "nombre",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "nombre",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "nombre"
 						},
 						{
-							"Caption": "edad",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "edad",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "edad"
 						},
 						{
-							"Caption": "empresa",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "empresa",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "empresa"
 						},
 						{
-							"Caption": "telefono",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "telefono",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "telefono"
 						},
 						{
-							"Caption": "correo",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "correo",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "correo"
 						}
-					]
+					],
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
 				}
-			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
+			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Donante_Create",
-	"PrefersLargeCaption": true
+	"Caption": "Create Donante Detail",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Donante/Donante_CreateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }

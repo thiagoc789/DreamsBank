@@ -1,84 +1,101 @@
 {
-	"Caption": "Donante Detail",
 	"DesignTimeTarget": {
 		"Service": "/DreamsBank/Services/dreamsbankkk.service",
 		"EntitySet": "Donante",
 		"QueryOptions": ""
 	},
-	"ActionBar": {
-		"Items": [
-			{
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Donante/NavToDonante_Edit.action",
-				"Position": "Right",
-				"SystemItem": "Edit"
-			},
-			{
-				"OnPress": "/DreamsBank/Rules/KnowledgePeople/Datos_Maestros/Donante/Donante_DeleteConfirmation.js",
-				"Position": "Right",
-				"SystemItem": "Trash"
-			}
-		]
-	},
 	"Controls": [
 		{
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
 			"Sections": [
 				{
 					"ObjectHeader": {
-						"Tags": [],
-						"DetailImage": "",
-						"HeadlineText": "{identificacion}",
 						"Subhead": "{nombre}",
-						"BodyText": "",
 						"Footnote": "{empresa}",
 						"Description": "{edad}",
 						"StatusText": "{telefono}",
-						"StatusImage": "",
-						"SubstatusImage": "",
-						"SubstatusText": "{correo}"
+						"SubstatusText": "{correo}",
+						"DetailImage": "{imagen}",
+						"Tags": [],
+						"HeadlineText": "{identificacion}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
 					},
-					"_Type": "Section.Type.ObjectHeader"
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0"
 				},
 				{
 					"KeyAndValues": [
 						{
-							"KeyName": "identificacion",
-							"Value": "{identificacion}"
+							"Value": "{identificacion}",
+							"_Name": "KeyValue0",
+							"KeyName": "identificacion"
 						},
 						{
-							"KeyName": "nombre",
-							"Value": "{nombre}"
+							"Value": "{nombre}",
+							"_Name": "KeyValue1",
+							"KeyName": "nombre"
 						},
 						{
-							"KeyName": "edad",
-							"Value": "{edad}"
+							"Value": "{edad}",
+							"_Name": "KeyValue2",
+							"KeyName": "edad"
 						},
 						{
-							"KeyName": "empresa",
-							"Value": "{empresa}"
+							"Value": "{empresa}",
+							"_Name": "KeyValue3",
+							"KeyName": "empresa"
 						},
 						{
-							"KeyName": "telefono",
-							"Value": "{telefono}"
+							"Value": "{telefono}",
+							"_Name": "KeyValue4",
+							"KeyName": "telefono"
 						},
 						{
-							"KeyName": "correo",
-							"Value": "{correo}"
+							"Value": "{correo}",
+							"_Name": "KeyValue5",
+							"KeyName": "correo"
 						}
 					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"EmptySection": {
+						"FooterVisible": false
+					},
 					"Layout": {
 						"NumberOfColumns": 2
-					},
-					"MaxItemCount": 1,
-					"_Name": "SectionKeyValue0",
-					"_Type": "Section.Type.KeyValue"
+					}
 				}
-			],
-			"DataSubscriptions": [],
-			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable"
+			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Donante_Detail",
-	"PrefersLargeCaption": true
+	"Caption": "Donante Detail",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Donante/NavToDonante_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Trash",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Rules/KnowledgePeople/Datos_Maestros/Donante/Donante_DeleteConfirmation.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }

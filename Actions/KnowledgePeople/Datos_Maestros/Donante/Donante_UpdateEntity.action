@@ -11,6 +11,8 @@
 		"ReadLink": "{@odata.readLink}"
 	},
 	"Properties": {
+		"identificacion": "#Control:identificacion/#Value",
+		"tipo": "#Control:tipo/#Value",
 		"nombre": "#Control:nombre/#Value",
 		"edad": "#Control:edad/#Value",
 		"empresa": "#Control:empresa/#Value",

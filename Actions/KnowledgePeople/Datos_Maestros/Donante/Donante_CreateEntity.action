@@ -1,21 +1,23 @@
 {
-    "CreateLinks": [],
-    "OnFailure": "/DreamsBank/Actions/CreateEntityFailureMessage.action",
-    "OnSuccess": "/DreamsBank/Actions/CreateEntitySuccessMessage.action",
-    "Properties": {
-        "identificacion": "#Control:identificacion/#Value",
-        "nombre": "#Control:nombre/#Value",
-        "edad": "#Control:edad/#Value",
-        "empresa": "#Control:empresa/#Value",
-        "telefono": "#Control:telefono/#Value",
-        "correo": "#Control:correo/#Value"
-    },
-    "Target": {
-        "EntitySet": "Donante",
-        "Service": "/DreamsBank/Services/dreamsbankkk.service"
-    },
-    "ActionResult": {
-        "_Name": "create"
-    },
-    "_Type": "Action.Type.ODataService.CreateEntity"
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"OnFailure": "/DreamsBank/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/DreamsBank/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"EntitySet": "Donante",
+		"Service": "/DreamsBank/Services/dreamsbankkk.service"
+	},
+	"Properties": {
+		"identificacion": "#Control:identificacion/#Value",
+		"tipo": "#Control:Fc_tipo_persona/#SelectedValue",
+		"nombre": "#Control:nombre/#Value",
+		"edad": "#Control:edad/#Value",
+		"empresa": "#Control:empresa/#Value",
+		"telefono": "#Control:telefono/#Value",
+		"correo": "#Control:correo/#Value",
+		"haDonado": false,
+		"id_producto": "0"
+	}
 }

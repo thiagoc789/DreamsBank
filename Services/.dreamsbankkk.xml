@@ -69,7 +69,7 @@
                 <Key>
                     <PropertyRef Name="id"/>
                 </Key>
-                <Property Name="id" Nullable="false" Type="Edm.Guid"/>
+                <Property MaxLength="100" Name="id" Nullable="false" Type="Edm.String"/>
                 <Property MaxLength="100" Name="nombre" Type="Edm.String"/>
                 <Property MaxLength="500" Name="descripcion" Type="Edm.String"/>
                 <Property MaxLength="100" Name="valor" Type="Edm.String"/>

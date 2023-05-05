@@ -10,7 +10,7 @@
 		"Service": "/DreamsBank/Services/dreamsbankkk.service"
 	},
 	"Properties": {
-		"cedula": "",
+		"cedula": "#Control:cedula/#Value",
 		"nombre": "#Control:nombre/#Value",
 		"edad": "#Control:edad/#Value",
 		"carrera": "#Control:carrera/#Value",
@@ -18,6 +18,7 @@
 		"universidad": "#Control:universidad/#Value",
 		"telefono": "#Control:telefono/#Value",
 		"correo": "#Control:correo/#Value",
-		"id_producto": "#Control:id_aporte/#Value"
+		"haAspirado": false,
+		"id_producto": "0"
 	}
 }

@@ -1,25 +1,23 @@
 {
-    "_Type": "Action.Type.ODataService.UpdateEntity",
-    "Target": {
-        "EntitySet": "Aspirante",
-        "Service": "/DreamsBank/Services/dreamsbankkk.service",
-        "ReadLink": "{@odata.readLink}"
-    },
-    "Properties": {
-        "cedula": "#Control:cedula/#Value",
-        "nombre": "#Control:nombre/#Value",
-        "edad": "#Control:edad/#Value",
-        "carrera": "#Control:carrera/#Value",
-        "semestre": "#Control:semestre/#Value",
-        "universidad": "#Control:universidad/#Value",
-        "telefono": "#Control:telefono/#Value",
-        "correo": "#Control:correo/#Value",
-        "id_producto": "#Control:id_aporte/#Value"
-    },
-    "UpdateLinks": [],
-    "ActionResult": {
-        "_Name": "update"
-    },
-    "OnSuccess": "/DreamsBank/Actions/UpdateEntitySuccessMessage.action",
-    "OnFailure": "/DreamsBank/Actions/UpdateEntityFailureMessage.action"
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "update"
+	},
+	"OnFailure": "/DreamsBank/Actions/UpdateEntityFailureMessage.action",
+	"OnSuccess": "/DreamsBank/Actions/UpdateEntitySuccessMessage.action",
+	"Target": {
+		"EntitySet": "Aspirante",
+		"Service": "/DreamsBank/Services/dreamsbankkk.service",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"cedula": "#Control:cedula/#Value",
+		"nombre": "#Control:nombre/#Value",
+		"edad": "#Control:edad/#Value",
+		"carrera": "#Control:carrera/#Value",
+		"semestre": "#Control:semestre/#Value",
+		"universidad": "#Control:universidad/#Value",
+		"telefono": "#Control:telefono/#Value",
+		"correo": "#Control:correo/#Value"
+	}
 }

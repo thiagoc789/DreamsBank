@@ -12,12 +12,13 @@
 			"Sections": [
 				{
 					"ObjectHeader": {
-						"Tags": [],
 						"Subhead": "{nombre}",
 						"Footnote": "{carrera}",
 						"Description": "{edad}",
 						"StatusText": "{semestre}",
 						"SubstatusText": "{universidad}",
+						"DetailImage": "{imagen}",
+						"Tags": [],
 						"HeadlineText": "{cedula}",
 						"StatusPosition": "Stacked",
 						"StatusImagePosition": "Leading",
@@ -90,6 +91,7 @@
 	"_Type": "Page",
 	"_Name": "Aspirante_Detail",
 	"Caption": "Aspirante Detail",
+	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{
@@ -110,6 +112,5 @@
 			}
 		],
 		"_Name": "ActionBar1"
-	},
-	"PrefersLargeCaption": true
+	}
 }

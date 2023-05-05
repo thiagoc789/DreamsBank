@@ -1,0 +1,138 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "seleccion_producto",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Seleccione un Producto",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Seleccione un producto",
+							"OnValueChange": "/DreamsBank/Rules/KnowledgePeople/Proceso/filtrarAspirantesYDonantes.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": {
+								"Target": {
+									"Service": "/DreamsBank/Services/dreamsbankkk.service",
+									"EntitySet": "Productos"
+								},
+								"ObjectCell": {
+									"Description": "{descripcion}",
+									"DetailImage": "{imagen}",
+									"DetailImageIsCircular": false,
+									"Footnote": "{valor}",
+									"Icons": [],
+									"PreserveIconStackSpacing": true,
+									"Styles": {},
+									"Title": "{nombre}"
+								},
+								"ReturnValue": "{id}"
+							}
+						}
+					],
+					"Visible": true
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker0",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Seleccione un Aspirante",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Seleccione un Aspirante",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": {
+								"Target": {
+									"Service": "/DreamsBank/Services/dreamsbankkk.service",
+									"EntitySet": "Aspirante",
+									"QueryOptions": ""
+								},
+								"ObjectCell": {
+									"Description": "{universidad}",
+									"DetailImage": "{imagen}",
+									"DetailImageIsCircular": false,
+									"Footnote": "{cedula}",
+									"Icons": [],
+									"PreserveIconStackSpacing": true,
+									"Styles": {},
+									"Subhead": "{correo}",
+									"SubstatusText": "{carrera}",
+									"Title": "{nombre}"
+								},
+								"ReturnValue": "{nombre}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker1",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Seleccione un Donante",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Seleccione un Donante",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": {
+								"Target": {
+									"Service": "/DreamsBank/Services/dreamsbankkk.service",
+									"EntitySet": "Donante",
+									"QueryOptions": ""
+								},
+								"ObjectCell": {
+									"Description": "{empresa}",
+									"DetailImage": "{imagen}",
+									"DetailImageIsCircular": false,
+									"Footnote": "{telefono}",
+									"Icons": [],
+									"PreserveIconStackSpacing": true,
+									"Styles": {},
+									"Subhead": "{identificacion}",
+									"SubstatusText": "{correo}",
+									"Title": "{nombre}"
+								},
+								"ReturnValue": "{nombre}"
+							}
+						}
+					],
+					"Visible": true
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Nuevo_Proceso",
+	"Caption": "Nuevo Proceso"
+}

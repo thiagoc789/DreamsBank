@@ -7,7 +7,12 @@
 				{
 					"Header": {
 						"_Name": "SectionHeader0",
+						"AccessoryType": "none",
 						"UseTopPadding": false
+					},
+					"Separators": {
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
@@ -21,25 +26,31 @@
 						"FooterVisible": false
 					},
 					"ObjectCell": {
-						"Title": "{identificacion}",
-						"Subhead": "{nombre}",
-						"Footnote": "{empresa}",
-						"Description": "{edad}",
-						"StatusText": "{telefono}",
-						"SubstatusText": "{correo}",
-						"AvatarStack": {
-							"Avatars": [
-								{
-									"Image": "https://cdn-icons-png.flaticon.com/512/306/306473.png"
-								}
-							]
-						},
-						"PreserveIconStackSpacing": false,
-						"AccessoryType": "disclosureIndicator",
-						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Donante/NavToDonante_Detail.action",
 						"ContextMenu": {
 							"Items": [],
 							"PerformFirstActionWithFullSwipe": true
+						},
+						"Title": "{nombre}",
+						"Subhead": "{identificacion}",
+						"Footnote": "{empresa}",
+						"Description": "/DreamsBank/Rules/KnowledgePeople/Datos_Maestros/Donante/haDonado.js",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "{telefono}",
+						"SubstatusText": "{correo}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"Tags": [],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "{imagen}"
+								}
+							]
+						},
+						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Donante/NavToDonante_Detail.action",
+						"Styles": {
+							"Description": "/DreamsBank/Rules/KnowledgePeople/Datos_Maestros/Donante/estilo_haDonado.js",
+							"Footnote": "redText"
 						}
 					},
 					"Search": {
@@ -64,6 +75,7 @@
 	"_Type": "Page",
 	"_Name": "Donante_List",
 	"Caption": "Donante",
+	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{
@@ -76,6 +88,5 @@
 			}
 		],
 		"_Name": "ActionBar1"
-	},
-	"PrefersLargeCaption": true
+	}
 }

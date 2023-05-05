@@ -45,11 +45,6 @@
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "correo",
 							"Caption": "correo"
-						},
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "id_aporte",
-							"Caption": "id_aporte"
 						}
 					],
 					"Visible": true,
@@ -65,6 +60,7 @@
 	"_Type": "Page",
 	"_Name": "Aspirante_Create",
 	"Caption": "Create Aspirante Detail",
+	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{
@@ -85,6 +81,5 @@
 			}
 		],
 		"_Name": "ActionBar1"
-	},
-	"PrefersLargeCaption": true
+	}
 }

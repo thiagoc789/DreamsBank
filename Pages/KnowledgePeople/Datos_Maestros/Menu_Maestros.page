@@ -6,7 +6,7 @@
 			"Sections": [
 				{
 					"ObjectHeader": {
-						"Description": "Se registran Donantes, Aspirantes Y Productos",
+						"Description": "Toda la información de los Donantes, Aspirantes Y Productos",
 						"DetailImage": "sap-icon://add-contact",
 						"DetailImageIsCircular": false,
 						"HeadlineText": "Datos Maestros",

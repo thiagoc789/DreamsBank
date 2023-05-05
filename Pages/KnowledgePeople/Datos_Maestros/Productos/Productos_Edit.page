@@ -1,65 +1,68 @@
 {
-	"Caption": "Update Productos Detail",
 	"DesignTimeTarget": {
 		"Service": "/DreamsBank/Services/dreamsbankkk.service",
 		"EntitySet": "Productos",
 		"QueryOptions": ""
 	},
-	"ActionBar": {
-		"Items": [
-			{
-				"Position": "Left",
-				"SystemItem": "Cancel",
-				"OnPress": "/DreamsBank/Actions/CloseModalPage_Cancel.action"
-			},
-			{
-				"Position": "Right",
-				"SystemItem": "Save",
-				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Productos/Productos_UpdateEntity.action"
-			}
-		]
-	},
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
-					"_Type": "Section.Type.FormCell",
-					"_Name": "SectionFormCell0",
-					"Visible": true,
 					"Controls": [
 						{
-							"Caption": "id",
-							"_Name": "id",
-							"Value": "{id}",
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"IsEditable": false
-						},
-						{
-							"Caption": "nombre",
-							"_Name": "nombre",
 							"Value": "{nombre}",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "nombre",
+							"Caption": "nombre"
 						},
 						{
-							"Caption": "descripcion",
-							"_Name": "descripcion",
 							"Value": "{descripcion}",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "descripcion",
+							"Caption": "descripcion"
 						},
 						{
-							"Caption": "valor",
-							"_Name": "valor",
 							"Value": "{valor}",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "valor",
+							"Caption": "valor"
 						}
-					]
+					],
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
 				}
-			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
+			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Productos_Edit",
-	"PrefersLargeCaption": true
+	"Caption": "Update Productos Detail",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Productos/Productos_UpdateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }

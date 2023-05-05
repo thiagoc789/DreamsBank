@@ -26,16 +26,17 @@
 							"PerformFirstActionWithFullSwipe": true
 						},
 						"Title": "{nombre}",
-						"Footnote": "{valor}",
+						"Footnote": "${valor}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"Tags": [],
 						"AvatarStack": {
 							"Avatars": [
 								{
-									"Image": "/DreamsBank/Images/lh.jpg"
+									"Image": "{imagen}"
 								}
 							]
 						},
-						"PreserveIconStackSpacing": false,
-						"AccessoryType": "disclosureIndicator",
 						"OnPress": "/DreamsBank/Actions/KnowledgePeople/Datos_Maestros/Productos/NavToProductos_Detail.action"
 					},
 					"Search": {
@@ -60,6 +61,7 @@
 	"_Type": "Page",
 	"_Name": "Productos_List",
 	"Caption": "Productos",
+	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{
@@ -72,6 +74,5 @@
 			}
 		],
 		"_Name": "ActionBar1"
-	},
-	"PrefersLargeCaption": true
+	}
 }
